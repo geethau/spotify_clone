@@ -284,19 +284,21 @@
 
     <!-- NAVBAR -->
     <nav class="navbar bg-black px-3 fixed-top" style="height: 64px; border-bottom: 1px solid #282828;">
-        <div class="container-fluid d-flex align-items-center gap-3">
+        <div class="container-fluid d-flex align-items-center justify-content-between flex-nowrap">
 
-            <i class="fa-brands fa-spotify text-white fs-2"></i>
+            <div class="d-flex align-items-center gap-3">
+                <i class="fa-brands fa-spotify text-white fs-2"></i>
 
-            <div class="bg-dark rounded-circle d-none d-md-flex align-items-center justify-content-center"
-                style="width:40px;height:40px;">
-                <i class="fa-solid fa-house text-white"></i>
+                <div class="bg-dark rounded-circle d-none d-md-flex align-items-center justify-content-center"
+                    style="width:40px;height:40px;">
+                    <i class="fa-solid fa-house text-white"></i>
+                </div>
             </div>
 
-            <form class="mx-auto">
+            <form class="mx-auto d-none d-md-block">
                 <div class="search-box d-flex align-items-center px-3 gap-3">
                     <i class="fa-solid fa-magnifying-glass text-secondary"></i>
-                    <input type="text" class="form-control shadow-none bg-transparent text-white border-0" placeholder="What do you want to play?" style="min-width: 250px;">
+                    <input type="text" class="form-control shadow-none bg-transparent text-white border-0" placeholder="What do you want to play?" style="min-width: 250px; max-width: 400px;">
                     <i class="fa-solid fa-folder-open text-white border-start ps-3 border-secondary"></i>
                 </div>
             </form>
@@ -306,9 +308,14 @@
                 <a href="#" class="text-white text-decoration-none d-none d-lg-block fw-bold small hover-white text-secondary">Support</a>
                 <a href="#" class="text-white text-decoration-none d-none d-lg-block fw-bold small hover-white text-secondary">Download</a>
                 <span class="d-none d-lg-block text-secondary">|</span>
-                <a href="#" class="text-white text-decoration-none d-none d-md-block fw-bold small hover-white text-secondary"><i class="fa-regular fa-circle-down"></i> Install App</a>
+                <a href="#" class="text-white text-decoration-none d-none d-lg-block fw-bold small hover-white text-secondary"><i class="fa-regular fa-circle-down"></i> Install App</a>
                 <a href="#" class="text-spotify-secondary text-decoration-none fw-bold hover-white d-none d-sm-block ps-2">Sign up</a>
                 <a href="#" class="btn btn-light rounded-pill text-dark fw-bold px-4 py-2">Log in</a>
+                
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="btn btn-link text-white text-decoration-none d-lg-none p-0 ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav">
+                    <i class="fa-solid fa-bars fs-3"></i>
+                </button>
             </div>
 
         </div>
@@ -592,6 +599,22 @@
             </div>
         </div>
         
+    </div>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end bg-spotify-dark text-white" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel" style="width: 300px;">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <h5 class="offcanvas-title fw-bold" id="mobileNavLabel"><i class="fa-brands fa-spotify text-white fs-3 me-2"></i> Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column gap-4 mt-3">
+            <a href="#" class="text-white text-decoration-none fw-bold fs-5">Premium</a>
+            <a href="#" class="text-white text-decoration-none fw-bold fs-5">Support</a>
+            <a href="#" class="text-white text-decoration-none fw-bold fs-5">Download</a>
+            <hr class="text-secondary my-1">
+            <a href="#" class="text-white text-decoration-none fw-bold fs-5"><i class="fa-regular fa-circle-down me-2"></i> Install App</a>
+            <a href="#" class="text-spotify-secondary text-decoration-none fw-bold fs-5">Sign up</a>
+        </div>
     </div>
 
     <!-- Bootstrap JS -->
